@@ -9,11 +9,12 @@ import { BookService } from '../../providers/book.service';
 })
 export class BookComponent implements OnInit {
 
-  book: Book;
+  book: Book = new Book();
 
-  constructor(  ){ this.book = new Book;}
+ 
+  constructor(private bookService: BookService) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {this.book= this.bookService.getFavorite();}
+  
+  favorite(): void {console.log('favorite clicked');}
 }
