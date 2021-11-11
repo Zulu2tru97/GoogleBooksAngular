@@ -6,12 +6,12 @@ describe('BookService', () => {
       let service: BookService;
       
       beforeEach(() => {
-        TestBed.configureTestingModule({});
-        service = TestBed.inject(BookService);
+          TestBed.configureTestingModule({});
+          service = TestBed.inject(BookService);
       });
 
       it('should be created', () => {
-        expect(service).toBeTruthy();
+          expect(service).toBeTruthy();
       });
 
       describe('getFavorite', () => {
@@ -22,6 +22,7 @@ describe('BookService', () => {
         });
 
       });
+
 
       describe('getSearchResults', () => {
 
@@ -39,6 +40,7 @@ describe('BookService', () => {
 
       });
 
+
       describe('getBooksToRead', () => {
 
         it('gets 3 books', () => {
@@ -54,4 +56,6 @@ describe('BookService', () => {
         });
         
       });
+
+
 });
