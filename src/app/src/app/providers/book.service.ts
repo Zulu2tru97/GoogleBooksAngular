@@ -10,9 +10,27 @@ export class BookService {
   {
     let results: Book[] = [];
 
+
     for(let i = 0; i < 10; i++  )
     {
       let result = this.getFavorite();
+      result.title = 'Search Result ' + i;
+      results.push(result);
+    }
+
+    return results;
+
+  }
+
+  getBooksToRead(term: string): Book[]
+  {
+    let results: Book[] = [];
+
+
+    for(let i = 0; i < 3; i++  )
+    {
+      let result = new Book;
+      result.title = 'To Read ' + i;
       results.push(result);
     }
 
